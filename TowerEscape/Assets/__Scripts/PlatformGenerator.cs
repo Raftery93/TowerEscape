@@ -19,12 +19,26 @@ public class PlatformGenerator : MonoBehaviour {
     void Update()
     {
 
+        int randomXPos = RandomNumber(-6, 7);
+
         if (transform.position.y < generationPoint.position.y)
         {
-            transform.position = new Vector2(transform.position.x,
+            //Create switch statement for 3 platform positions
+            //Create 1 or 2 platforms (Random)
+
+            //Change position on x axis (Random number)
+            transform.position = new Vector2(randomXPos,
                 transform.position.y + platformWidth + distanceBetween);
 
             Instantiate(thePlatforms, transform.position, transform.rotation);
         }
+    }
+
+    // Generate a random number between two numbers
+    public int RandomNumber(int min, int max)
+    {
+        System.Random ran = new System.Random();
+        int number = ran.Next(min, max);
+        return number;
     }
 }
