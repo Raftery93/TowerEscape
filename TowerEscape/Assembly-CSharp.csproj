@@ -54,9 +54,11 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\__Scripts\BoundaryGenerator.cs" />
+     <Compile Include="Assets\__Scripts\CameraController.cs" />
      <Compile Include="Assets\__Scripts\Enemy.cs" />
      <Compile Include="Assets\__Scripts\FallingBehaviour.cs" />
      <Compile Include="Assets\__Scripts\GameController.cs" />
+     <Compile Include="Assets\__Scripts\PlatformGenerator.cs" />
      <Compile Include="Assets\__Scripts\PlayerBehaviour.cs" />
      <Compile Include="Assets\__Scripts\PointSpawner.cs" />
      <Compile Include="Assets\__Scripts\SpawnPoint.cs" />
