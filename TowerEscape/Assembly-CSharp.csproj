@@ -64,6 +64,7 @@
      <Compile Include="Assets\__Scripts\PointSpawner.cs" />
      <Compile Include="Assets\__Scripts\SpawnPoint.cs" />
      <Compile Include="Assets\__Scripts\Utilities\ListUtility.cs" />
+     <Compile Include="Assets\MainMenu.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/c-raf/Desktop/TowerEscape/TowerEscape/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
