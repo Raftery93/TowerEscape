@@ -9,10 +9,12 @@ public class PlatformGenerator : MonoBehaviour {
     public float distanceBetween;
     private float platformWidth;
 
+
     // Use this for initialization
     void Start()
     {
         platformWidth = thePlatforms.GetComponent<BoxCollider2D>().size.y;
+
     }
 
     // Update is called once per frame
@@ -31,6 +33,7 @@ public class PlatformGenerator : MonoBehaviour {
                 transform.position.y + platformWidth + distanceBetween);
 
             Instantiate(thePlatforms, transform.position, transform.rotation);
+
         }
     }
 

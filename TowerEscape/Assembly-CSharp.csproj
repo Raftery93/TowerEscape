@@ -53,18 +53,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\__Scripts\AudioManager.cs" />
      <Compile Include="Assets\__Scripts\BackgroundGenerator.cs" />
      <Compile Include="Assets\__Scripts\BoundaryGenerator.cs" />
      <Compile Include="Assets\__Scripts\CameraController.cs" />
      <Compile Include="Assets\__Scripts\Enemy.cs" />
      <Compile Include="Assets\__Scripts\FallingBehaviour.cs" />
      <Compile Include="Assets\__Scripts\GameController.cs" />
+     <Compile Include="Assets\__Scripts\MainMenu.cs" />
+     <Compile Include="Assets\__Scripts\MainMenuSound.cs" />
+     <Compile Include="Assets\__Scripts\MusicManager.cs" />
+     <Compile Include="Assets\__Scripts\PauseMenu.cs" />
      <Compile Include="Assets\__Scripts\PlatformGenerator.cs" />
      <Compile Include="Assets\__Scripts\PlayerBehaviour.cs" />
-     <Compile Include="Assets\__Scripts\PointSpawner.cs" />
-     <Compile Include="Assets\__Scripts\SpawnPoint.cs" />
+     <Compile Include="Assets\__Scripts\PointGenerator.cs" />
+     <Compile Include="Assets\__Scripts\ScoreAdd.cs" />
+     <Compile Include="Assets\__Scripts\ScoreManager.cs" />
      <Compile Include="Assets\__Scripts\Utilities\ListUtility.cs" />
-     <Compile Include="Assets\MainMenu.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/c-raf/Desktop/TowerEscape/TowerEscape/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
