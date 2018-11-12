@@ -57,9 +57,8 @@
      <Compile Include="Assets\__Scripts\BackgroundGenerator.cs" />
      <Compile Include="Assets\__Scripts\BoundaryGenerator.cs" />
      <Compile Include="Assets\__Scripts\CameraController.cs" />
-     <Compile Include="Assets\__Scripts\Enemy.cs" />
      <Compile Include="Assets\__Scripts\FallingBehaviour.cs" />
-     <Compile Include="Assets\__Scripts\GameController.cs" />
+     <Compile Include="Assets\__Scripts\HighScoreManager.cs" />
      <Compile Include="Assets\__Scripts\MainMenu.cs" />
      <Compile Include="Assets\__Scripts\MainMenuSound.cs" />
      <Compile Include="Assets\__Scripts\MusicManager.cs" />

@@ -8,7 +8,7 @@ public class PlatformGenerator : MonoBehaviour {
     public Transform generationPoint;
     public float distanceBetween;
     private float platformWidth;
-
+    
 
     // Use this for initialization
     void Start()
@@ -25,14 +25,18 @@ public class PlatformGenerator : MonoBehaviour {
 
         if (transform.position.y < generationPoint.position.y)
         {
-            //Create switch statement for 3 platform positions
-            //Create 1 or 2 platforms (Random)
 
-            //Change position on x axis (Random number)
-            transform.position = new Vector2(randomXPos,
+            int pointsToAdd = 1;
+    //Create switch statement for 3 platform positions
+    //Create 1 or 2 platforms (Random)
+
+    //Change position on x axis (Random number)
+    transform.position = new Vector2(randomXPos,
                 transform.position.y + platformWidth + distanceBetween);
 
             Instantiate(thePlatforms, transform.position, transform.rotation);
+            ScoreManager.AddPoints(pointsToAdd);
+
 
         }
     }
