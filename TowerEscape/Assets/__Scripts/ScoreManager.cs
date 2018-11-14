@@ -34,10 +34,8 @@ public class ScoreManager : MonoBehaviour {
 
     public void HighScorePrefs()
     {
-        Debug.Log("In highScorePrefs Score:" + score + "HighScore:" + highScore);
         if (score > highScore)
         {
-            Debug.Log("In if: Score:" + score);
             PlayerPrefs.SetInt("HighScore", score);
         }
     }

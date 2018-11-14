@@ -9,6 +9,8 @@ public class PlayerBehaviour : MonoBehaviour
 
     private bool onGround = false;
 
+    public static int pauseCamera;
+
     // Use this for initialization
     void Start()
     {
@@ -18,6 +20,8 @@ public class PlayerBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        
 
         movement = Input.GetAxis("Horizontal");
         if (movement > 0f)
@@ -36,6 +40,16 @@ public class PlayerBehaviour : MonoBehaviour
         {
             rigidBody.velocity = new Vector2(rigidBody.velocity.x, jumpSpeed);
         }
+
+        var cameraPosition = Camera.main.gameObject.transform.position;
+
+        if ((rigidBody.position.y + 5.8) < cameraPosition.y)
+        {
+
+            Debug.Log("Player Died");
+
+        }
+        
     }
 
 
@@ -56,5 +70,6 @@ public class PlayerBehaviour : MonoBehaviour
             onGround = false;
         }
     }
+
 
 }
