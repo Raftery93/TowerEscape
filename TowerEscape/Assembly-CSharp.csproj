@@ -57,6 +57,7 @@
      <Compile Include="Assets\__Scripts\BackgroundGenerator.cs" />
      <Compile Include="Assets\__Scripts\BoundaryGenerator.cs" />
      <Compile Include="Assets\__Scripts\CameraController.cs" />
+     <Compile Include="Assets\__Scripts\DeadMenu.cs" />
      <Compile Include="Assets\__Scripts\FallingBehaviour.cs" />
      <Compile Include="Assets\__Scripts\HighScoreManager.cs" />
      <Compile Include="Assets\__Scripts\MainCameraManager.cs" />

@@ -10,6 +10,9 @@ public class BoundaryGenerator : MonoBehaviour {
     public float distanceBetween;
     private float boundaryWidth;
 
+
+    GameObject clones;
+
 	// Use this for initialization
 	void Start () {
         boundaryWidth = theBoundary.GetComponent<BoxCollider2D>().size.y;
@@ -23,7 +26,9 @@ public class BoundaryGenerator : MonoBehaviour {
             transform.position = new Vector2(transform.position.x,
                 transform.position.y + boundaryWidth + distanceBetween);
 
-            Instantiate(theBoundary, transform.position, transform.rotation);
+           clones = Instantiate(theBoundary, transform.position, transform.rotation);
         }
-	}
+
+        Destroy(clones, 30);
+    }
 }

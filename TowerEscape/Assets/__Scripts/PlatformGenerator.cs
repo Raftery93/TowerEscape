@@ -8,7 +8,9 @@ public class PlatformGenerator : MonoBehaviour {
     public Transform generationPoint;
     public float distanceBetween;
     private float platformWidth;
-    
+
+    GameObject clones;
+
 
     // Use this for initialization
     void Start()
@@ -34,11 +36,17 @@ public class PlatformGenerator : MonoBehaviour {
     transform.position = new Vector2(randomXPos,
                 transform.position.y + platformWidth + distanceBetween);
 
-            Instantiate(thePlatforms, transform.position, transform.rotation);
+            clones = Instantiate(thePlatforms, transform.position, transform.rotation);
             ScoreManager.AddPoints(pointsToAdd);
 
 
         }
+
+        Destroy(clones, 30);
+      
+
+
+
     }
 
     // Generate a random number between two numbers

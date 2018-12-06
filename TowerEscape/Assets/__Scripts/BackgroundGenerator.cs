@@ -9,6 +9,9 @@ public class BackgroundGenerator : MonoBehaviour {
     public float distanceBetween;
     private float BackgroundWidth;
 
+
+    GameObject clones;
+
     // Use this for initialization
     void Start()
     {
@@ -24,7 +27,9 @@ public class BackgroundGenerator : MonoBehaviour {
             transform.position = new Vector3(transform.position.x,
                 transform.position.y + BackgroundWidth + distanceBetween, 1);
 
-            Instantiate(theBackground, transform.position, transform.rotation);
+            clones = Instantiate(theBackground, transform.position, transform.rotation);
         }
+
+        Destroy(clones, 30);
     }
 }

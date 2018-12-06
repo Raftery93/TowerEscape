@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class PauseMenu : MonoBehaviour {
 
@@ -10,19 +12,27 @@ public class PauseMenu : MonoBehaviour {
 
     public GameObject pauseMenuCanvas;
 
-	
-	// Update is called once per frame
-	void Update () {
-
-        
+    public float step = 0.0f;
+    float valueToIncrease = 0.00001f;
+    float saveSpeed;
 
 
-        if (isPaused)
+    // Update is called once per frame
+    void Update () {
+
+        if (step > 0.0f)
         {
+            saveSpeed = step;
+            PlayerPrefs.SetFloat("saveSpeed", saveSpeed);
+            Debug.Log(saveSpeed);
+        }
+
+        if (isPaused) {
+        
             pauseMenuCanvas.SetActive(true);
             Time.timeScale = 0f;
 
-            float step = 0.00f;
+            step = 0.00f;
 
 
             var cameraPosition = Camera.main.gameObject.transform.position;
@@ -35,7 +45,14 @@ public class PauseMenu : MonoBehaviour {
             pauseMenuCanvas.SetActive(false);
             Time.timeScale = 1f;
 
-            float step = 0.01f;
+            step += valueToIncrease;
+
+           // Debug.Log("step: "+step);
+
+            if (step > 0.04f)
+            {
+                step = 0.04f;
+            }
 
 
             var cameraPosition = Camera.main.gameObject.transform.position;
@@ -46,6 +63,7 @@ public class PauseMenu : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            step = PlayerPrefs.GetFloat("saveSpeed");
             isPaused = !isPaused;
         }
 
@@ -58,7 +76,8 @@ public class PauseMenu : MonoBehaviour {
 
     public void Quit()
     {
-        Application.LoadLevel(mainMenu);
+        //Application.LoadLevel(mainMenu);
+        SceneManager.LoadScene(mainMenu);
     }
 
     
