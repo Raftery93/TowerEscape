@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Used for getting the music volume ingame
 public class MainMenuSound : MonoBehaviour {
 
 

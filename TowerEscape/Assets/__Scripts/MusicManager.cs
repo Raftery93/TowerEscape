@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Used for getting the music volume
 public class MusicManager : MonoBehaviour {
 
     public AudioSource music;
-    // Use this for initialization
+  
     void Start () {
 
        // Time.timeScale = 1f;

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//------------------This class is void, it was going to be used for generating game objects on platforms
+//Dont want to delete the script as I want to come back at a later date to fix the issue
 public class PointGenerator : MonoBehaviour {
 
     public GameObject thePoints;

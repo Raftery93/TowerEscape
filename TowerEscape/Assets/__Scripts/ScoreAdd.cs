@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Used for adding to the score
 public class ScoreAdd : MonoBehaviour {
 
     public int pointsToAdd;

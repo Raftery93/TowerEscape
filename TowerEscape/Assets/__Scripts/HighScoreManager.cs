@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//Used for setting the highscore
 public class HighScoreManager : MonoBehaviour {
 
     public static int highScore;
 
     Text text;
-
-
 
     void Start()
     {
@@ -17,6 +16,7 @@ public class HighScoreManager : MonoBehaviour {
 
         highScore = PlayerPrefs.GetInt("HighScore");
 
+        //Displays the highscore ingame
         text.text = "" + highScore;
     }
 
